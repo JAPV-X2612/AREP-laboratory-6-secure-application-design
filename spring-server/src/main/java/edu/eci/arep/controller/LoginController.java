@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  * @since 2026-03-23
  */
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class LoginController {
