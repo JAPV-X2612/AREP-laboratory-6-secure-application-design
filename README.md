@@ -44,7 +44,7 @@ The client, served from Apache, invokes the Spring REST API **asynchronously** f
 
 ## 🏗️ **Architecture**
 
-<img src="assets/images/00-target-architecture.png" alt="Target Architecture" width="70%">
+<img src="assets/images/00-target-architecture.png" alt="Target Architecture">
 
 *Two-server secure architecture: Apache serves the HTML client; Spring Boot handles authentication via HTTPS*
 
@@ -296,7 +296,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### EC2 Instances Running
 
-<img src="assets/images/01-aws-ec2-instances-running.png" alt="EC2 Instances Running" width="70%">
+<img src="assets/images/01-aws-ec2-instances-running.png" alt="EC2 Instances Running" width="90%">
 
 *Two EC2 instances in running state on AWS Console — Apache (EC2-lab6-1) and Spring (EC2-lab6-2) servers*
 
@@ -304,7 +304,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Security Group Inbound Rules
 
-<img src="assets/images/02-asw-security-group-inbound-rules.png" alt="Security Group Inbound Rules" width="70%">
+<img src="assets/images/02-asw-security-group-inbound-rules.png" alt="Security Group Inbound Rules" width="90%">
 
 *Inbound rules allowing SSH (22), HTTP (80), HTTPS (443), and custom TCP ports 8080 and 8443*
 
@@ -312,7 +312,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Duck DNS Domains Configured
 
-<img src="assets/images/03-duckdns-apache-and-spring-domains.png" alt="Duck DNS Domains" width="70%">
+<img src="assets/images/03-duckdns-apache-and-spring-domains.png" alt="Duck DNS Domains" width="90%">
 
 *Both subdomains — `arep-lab6-apache` and `arep-lab6-spring` — pointing to their respective EC2 public IPs*
 
@@ -320,7 +320,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Apache Server — HTTPS with Valid Certificate
 
-<img src="assets/images/04-apache-https-browser.png" alt="Apache HTTPS Browser" width="70%">
+<img src="assets/images/04-apache-https-browser.png" alt="Apache HTTPS Browser" width="90%">
 
 *`https://arep-lab6-apache.duckdns.org` served over HTTPS with a valid Let's Encrypt certificate*
 
@@ -328,7 +328,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Java and Maven Installed on EC2 #2
 
-<img src="assets/images/05-java-maven-installed.png" alt="Java and Maven Installed" width="70%">
+<img src="assets/images/05-java-maven-installed.png" alt="Java and Maven Installed" width="90%">
 
 *Java 17 (Amazon Corretto) and Apache Maven 3.8.4 confirmed on EC2 #2*
 
@@ -336,7 +336,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Spring Boot Server Running on EC2 #2
 
-<img src="assets/images/06-spring-server-running.png" alt="Spring Server Running" width="70%">
+<img src="assets/images/06-spring-server-running.png" alt="Spring Server Running" width="90%">
 
 *Spring Boot application started successfully on port `8443` (HTTPS)*
 
@@ -344,7 +344,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Spring Server — HTTPS with Valid Certificate
 
-<img src="assets/images/07-spring-https-browser.png" alt="Spring HTTPS Browser" width="70%">
+<img src="assets/images/07-spring-https-browser.png" alt="Spring HTTPS Browser" width="90%">
 
 *`https://arep-lab6-spring.duckdns.org` validated with a trusted Let's Encrypt certificate*
 
@@ -352,7 +352,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Login Successful
 
-<img src="assets/images/08-login-success.png" alt="Login Success" width="70%">
+<img src="assets/images/08-login-success.png" alt="Login Success">
 
 *Client served from Apache successfully authenticates against the Spring REST API over HTTPS — `200 OK` with "Login successful"*
 
@@ -360,7 +360,7 @@ curl -k -X POST "https://arep-lab6-spring.duckdns.org:8443/api/login?username=ad
 
 ### Login Failure — Invalid Credentials
 
-<img src="assets/images/09-login-failure.png" alt="Login Failure" width="70%">
+<img src="assets/images/09-login-failure.png" alt="Login Failure">
 
 *Invalid credentials correctly rejected with `401 Unauthorized` and "Invalid credentials" message*
 
